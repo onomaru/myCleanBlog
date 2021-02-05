@@ -1,6 +1,6 @@
 <?php $this->setLayoutVar('title', 'ホーム') ?>
 
-<h2>ホーム</h2>
+
 
 <!-- <form action="<?php echo $base_url; ?>/status/post" method="post">
     <input type="hidden" name="_token" value="<?php echo $this->escape($_token); ?>" />
@@ -15,8 +15,20 @@
     </p>
 </form> -->
 
-<div id="statuses">
-    <?php foreach ($statuses as $status): ?>
-    <?php echo $this->render('status/status', array('status' => $status)); ?>
-    <?php endforeach; ?>
-</div>
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>
+            <div id="statuses">
+                <?php foreach ($statuses as $status): ?>
+                <?php echo $this->render('status/status', array('status' => $status)); ?>
+                <?php endforeach; ?>
+            </div>
+        </p>
+      </div>
+    </div>
+  </div>
+

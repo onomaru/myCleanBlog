@@ -13,6 +13,7 @@ class MiniBlogApplication extends Application
     //ルーティング定義配列を返す
     protected function registerRoutes()
     {
+        //:id などは$paramsから取ってこれる
         return array(
             '/contact'
             => array('controller' => 'account', 'action' => 'contact'),
@@ -28,6 +29,14 @@ class MiniBlogApplication extends Application
             => array('controller' => 'status', 'action' => 'postView'),
             '/status/post'
             => array('controller' => 'status', 'action' => 'post'),
+            '/status/edit/:user_name/:id'
+            => array('controller' => 'status', 'action' => 'edit'),
+            '/status/update/:id'
+            => array('controller' => 'status', 'action' => 'update'),
+            '/status/delete/:id'
+            => array('controller' => 'status', 'action' => 'delete'),
+            '/user/:user_name'
+            => array('controller' => 'status', 'action' => 'user'),
             '/user/:user_name/status/:id'
             => array('controller' => 'status', 'action' => 'show'),
         );
