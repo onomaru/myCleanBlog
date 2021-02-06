@@ -43,13 +43,13 @@
             <a class="nav-link" href="<?php echo $base_url; ?>/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo $base_url; ?>/about">About0</a>
+            <a class="nav-link" href="<?php echo $base_url; ?>/about">About</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="<?php echo $base_url; ?>/status/postView">Sample Post</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo $base_url; ?>/contact">Contact0</a>
+            <a class="nav-link" href="<?php echo $base_url; ?>/contact">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo $base_url; ?>/account">Account</a>

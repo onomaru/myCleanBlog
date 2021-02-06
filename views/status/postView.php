@@ -6,7 +6,7 @@
     <?php endif; ?>
 
     <!-- <textarea name="body" rows="2" cols="60"><?php echo $this->escape($body); ?></textarea> -->
-    <p>記事投稿</p>
+    <h2>記事投稿</h2>
     <!-- タイトル -->
     <div class="control-group">
             <div class="form-group floating-label-form-group controls">
