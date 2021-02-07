@@ -1,4 +1,4 @@
-<?php $this->setLayoutVar('title', 'ログイン') ?>
+<?php $this->setLayoutVar('title', 'Login') ?>
 
 <h2>ログイン</h2>
 

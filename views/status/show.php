@@ -1,4 +1,4 @@
-<?php $this->setLayoutVar('title', $status['user_name']) ?>
+<?php $this->setLayoutVar('title', $status['title']) ?>
 
 
 <div class="container">

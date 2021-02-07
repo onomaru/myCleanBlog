@@ -1,4 +1,4 @@
-<?php $this->setLayoutVar('title', 'contact') ?>
+<?php $this->setLayoutVar('title', 'Contact') ?>
   
   
   <!-- Main Content -->

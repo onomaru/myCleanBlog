@@ -1,4 +1,4 @@
-<?php $this->setLayoutVar('title', 'ホーム') ?>
+<?php $this->setLayoutVar('title', 'Home') ?>
 
 
 

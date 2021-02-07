@@ -3,7 +3,7 @@
 class StatusController extends Controller
 {
     //index
-    protected $auth_actions = array('post','postView'.'edit','update','delete');
+    protected $auth_actions = array('post','postView'.'edit','update','delete','user');
 
     //ホームページにあたるindexアクション
     //ログインしているユーザのホームページにあたる

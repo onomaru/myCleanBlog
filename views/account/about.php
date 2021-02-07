@@ -1,4 +1,4 @@
-<?php $this->setLayoutVar('title', 'about') ?>
+<?php $this->setLayoutVar('title', 'About') ?>
 
   <!-- Main Content -->
   <div class="container">
@@ -11,4 +11,4 @@
     </div>
   </div>
 
-  <hr>
+

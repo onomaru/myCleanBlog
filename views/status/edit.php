@@ -1,3 +1,5 @@
+<?php $this->setLayoutVar('title', 'Edit') ?>
+
 <form action="<?php echo $base_url; ?>/status/update/<?php echo $this->escape($status['id']); ?>" method="post">
     <input type="hidden" name="_token" value="<?php echo $this->escape($_token); ?>" />
 
@@ -5,7 +7,7 @@
     <?php echo $this->render('errors', array('errors' => $errors)) ?>
     <?php endif; ?>
 
-    <h2>記事投稿</h2>
+    <h2>記事編集</h2>
     <!-- タイトル -->
     <div class="control-group">
             <div class="form-group floating-label-form-group controls">
