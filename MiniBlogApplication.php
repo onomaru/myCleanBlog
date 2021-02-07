@@ -31,7 +31,7 @@ class MiniBlogApplication extends Application
             => array('controller' => 'status', 'action' => 'post'),
             '/status/edit/:user_name/:id'
             => array('controller' => 'status', 'action' => 'edit'),
-            '/status/update/:id'
+            '/status/update/:user_name/:id'
             => array('controller' => 'status', 'action' => 'update'),
             '/status/delete/:id'
             => array('controller' => 'status', 'action' => 'delete'),

@@ -1,6 +1,6 @@
 <?php $this->setLayoutVar('title', 'Edit') ?>
 
-<form action="<?php echo $base_url; ?>/status/update/<?php echo $this->escape($status['id']); ?>" method="post">
+<form action="<?php echo $base_url; ?>/status/update/<?php echo $this->escape($status['user_name']); ?>/<?php echo $this->escape($status['id']); ?>" method="post">
     <input type="hidden" name="_token" value="<?php echo $this->escape($_token); ?>" />
 
     <?php if (isset($errors) && count($errors) > 0): ?>

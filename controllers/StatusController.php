@@ -66,16 +66,12 @@ class StatusController extends Controller
             return $this->redirect('/');
         }
 
-        //errorの時は再度index画面に戻るが、index画面は投稿一覧も表示しているため
-        //もう一度$statues(投稿内容)をとってくる必要がある
-        $user = $this->session->get('user');
-        $statuses = $this->db_manager->get('Status')
-            ->fetchAllPersonalArchivesByUserId($user['id']);
+
 
         return $this->render(array(
             'errors'   => $errors,
             'body'     => $body,
-            'statuses' => $statuses,
+            'title'    => $title,
             '_token'   => $this->generateCsrfToken('status/post'),
         ), 'postView');
     }
@@ -143,29 +139,27 @@ class StatusController extends Controller
         $errors = array();
 
         if (!strlen($body)) {
-            $errors[] = 'ひとことを入力してください';
+            $errors[] = '内容を入力してください';
         } elseif (mb_strlen($body) > 1255) {
-            $errors[] = 'ひとことは1255 文字以内で入力してください';
+            $errors[] = '内容は1255 文字以内で入力してください';
         }
 
         if (count($errors) === 0) {
-            $user = $this->session->get('user');
             $this->db_manager->get('Status')->update($params['id'], $title, $body);
 
             //var_dump($params);
             return $this->redirect('/');
         }
 
-        //errorの時は再度index画面に戻るが、index画面は投稿一覧も表示しているため
-        //もう一度$statues(投稿内容)をとってくる必要がある
-        $user = $this->session->get('user');
+        //errorの時はもう一度投稿内容を保持するために$statues(投稿内容)をとってくる必要がある
 
         $status = $this->db_manager->get('Status')
         ->fetchByIdAndUserName($params['id'], $params['user_name']);
-        var_dump($status);
+        //var_dump($status);
         return $this->render(array(
             'errors'   => $errors,
             'body'     => $body,
+            'title'    => $title,
             'status' => $status,
             '_token'   => $this->generateCsrfToken('status/edit'),
         ), 'edit');
