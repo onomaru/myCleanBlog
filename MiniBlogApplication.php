@@ -16,9 +16,9 @@ class MiniBlogApplication extends Application
         //:id などは$paramsから取ってこれる
         return array(
             '/contact'
-            => array('controller' => 'account', 'action' => 'contact'),
+            => array('controller' => 'general', 'action' => 'contact'),
             '/about'
-            => array('controller' => 'account', 'action' => 'about'),
+            => array('controller' => 'general', 'action' => 'about'),
             '/account'
             => array('controller' => 'account', 'action' => 'index'),
             '/account/:action'
