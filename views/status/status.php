@@ -12,7 +12,7 @@
             </h2>
           </a>
           <p class="post-meta">Posted by
-            <a href="#"><a href="<?php echo $base_url; ?>/user/<?php echo $this->escape($status['user_name']); ?>">
+            <a href="#"><a href="<?php echo $base_url; ?>/general/user/<?php echo $this->escape($status['user_name']); ?>">
             <?php echo $this->escape($status['user_name']); ?>
         </a></a>
             <?php echo $this->escape($status['created_at']); ?></p>

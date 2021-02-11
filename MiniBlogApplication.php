@@ -19,6 +19,8 @@ class MiniBlogApplication extends Application
             => array('controller' => 'general', 'action' => 'contact'),
             '/about'
             => array('controller' => 'general', 'action' => 'about'),
+            '/general/user/:user_name'
+            => array('controller' => 'general', 'action' => 'postList'),
             '/account'
             => array('controller' => 'account', 'action' => 'index'),
             '/account/:action'
