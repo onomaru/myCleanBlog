@@ -35,7 +35,6 @@ class GeneralController extends Controller
         return $this->render(array(
                 'user'      => $user,
                 'statuses'  => $statuses,
-                '_token'    => $this->generateCsrfToken('account/follow'),
             ));
     }
 }
